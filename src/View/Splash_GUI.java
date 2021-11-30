@@ -79,7 +79,7 @@ public class Splash_GUI extends javax.swing.JFrame {
         jPanel1.add(progresso);
         progresso.setBounds(76, 204, 250, 20);
         jPanel1.add(mensagem);
-        mensagem.setBounds(80, 240, 240, 20);
+        mensagem.setBounds(50, 240, 300, 20);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

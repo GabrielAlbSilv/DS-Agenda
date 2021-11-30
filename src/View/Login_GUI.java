@@ -5,6 +5,8 @@
  */
 package View;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author ETECIA
@@ -27,23 +29,82 @@ public class Login_GUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        login = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        Logar = new javax.swing.JButton();
+        senha = new javax.swing.JPasswordField();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
+        getContentPane().setLayout(null);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        jPanel1.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel1.setLayout(null);
 
-        setSize(new java.awt.Dimension(400, 300));
+        jLabel1.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel1.setText("AGENDA ETEC");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(170, 20, 230, 30);
+
+        jLabel2.setText("Senha");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(130, 160, 50, 14);
+
+        login.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                loginActionPerformed(evt);
+            }
+        });
+        jPanel1.add(login);
+        login.setBounds(180, 110, 150, 20);
+
+        jLabel3.setText("Usuário");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(130, 110, 50, 14);
+
+        Logar.setText("Logar");
+        Logar.setFocusPainted(false);
+        Logar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LogarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Logar);
+        Logar.setBounds(210, 240, 100, 22);
+        jPanel1.add(senha);
+        senha.setBounds(180, 160, 150, 20);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 500, 300);
+
+        setSize(new java.awt.Dimension(500, 300));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_loginActionPerformed
+
+    private void LogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogarActionPerformed
+       
+       String log = login.getText(); 
+       String sen = senha.getText();
+       
+       if(log.equals("fabio") && sen.equals("etec")){
+           JOptionPane.showMessageDialog(null,"Bem vindo ao sistema");
+       }else{
+           JOptionPane.showMessageDialog(null,"Usuario ou senha incorreto \nSistema será fechado");
+           System.exit(0);
+       }
+        
+        
+        
+        
+        
+    }//GEN-LAST:event_LogarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -81,5 +142,12 @@ public class Login_GUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Logar;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField login;
+    private javax.swing.JPasswordField senha;
     // End of variables declaration//GEN-END:variables
 }
