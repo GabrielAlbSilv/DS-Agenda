@@ -13,7 +13,7 @@ public class Splash_GUI extends javax.swing.JFrame {
         //----------------------Inicio----------------------------
                 new Thread(){
         
-            public void run() {
+        public void run() {
         
         
         for (int i=0; i<101; i++){
@@ -24,18 +24,18 @@ public class Splash_GUI extends javax.swing.JFrame {
                         
                         if(progresso.getValue() == 10){
                         
-                            mensagem.setText("Fazendo a conexao com o banco de dados");
+                            mensagem.setText("Carregando");
                             sleep(2000);
                                                        
                         
                         }else if (progresso.getValue() <=30){
-                            mensagem.setText("Carregando o sistema");
+                            mensagem.setText("Preparando arquivos");
                           sleep(100);  
                         } else if (progresso.getValue() <=99){
-                            mensagem.setText("Carregamento quase completo");
+                            mensagem.setText("Fazendo alugns ajustes");
                             
                         }else{
-                            mensagem.setText("Carregamento completo. Seu programa sera iniciado.");
+                            mensagem.setText("Finalizado");
                         
                         sleep(3000);
                         
@@ -58,8 +58,6 @@ public class Splash_GUI extends javax.swing.JFrame {
         
     
         
-        
-        
         //----------------------Termino-------------------------
     }
 
@@ -68,34 +66,36 @@ public class Splash_GUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        panelImage1 = new org.edisoncor.gui.panel.PanelImage();
         progresso = new javax.swing.JProgressBar();
         mensagem = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
+        getContentPane().setLayout(null);
 
-        jPanel1.setLayout(null);
-        jPanel1.add(progresso);
-        progresso.setBounds(76, 204, 250, 20);
-        jPanel1.add(mensagem);
-        mensagem.setBounds(50, 240, 300, 20);
+        panelImage1.setBackground(new java.awt.Color(204, 255, 255));
+        panelImage1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelImage1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/wall.jpg"))); // NOI18N
+        panelImage1.setLayout(null);
+        panelImage1.add(progresso);
+        progresso.setBounds(120, 170, 176, 20);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        mensagem.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        panelImage1.add(mensagem);
+        mensagem.setBounds(120, 210, 170, 30);
 
-        setSize(new java.awt.Dimension(400, 300));
+        jLabel1.setFont(new java.awt.Font("Forte", 0, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 204));
+        jLabel1.setText("Agenda");
+        panelImage1.add(jLabel1);
+        jLabel1.setBounds(150, 20, 140, 50);
+
+        getContentPane().add(panelImage1);
+        panelImage1.setBounds(0, 0, 407, 300);
+
+        setSize(new java.awt.Dimension(407, 300));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -135,8 +135,9 @@ public class Splash_GUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel mensagem;
+    private org.edisoncor.gui.panel.PanelImage panelImage1;
     private javax.swing.JProgressBar progresso;
     // End of variables declaration//GEN-END:variables
 }
