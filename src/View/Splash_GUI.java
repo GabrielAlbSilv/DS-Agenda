@@ -79,6 +79,9 @@ public class Splash_GUI extends javax.swing.JFrame {
         panelImage1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         panelImage1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/wall.jpg"))); // NOI18N
         panelImage1.setLayout(null);
+
+        progresso.setForeground(new java.awt.Color(204, 255, 255));
+        progresso.setStringPainted(true);
         panelImage1.add(progresso);
         progresso.setBounds(120, 170, 176, 20);
 
